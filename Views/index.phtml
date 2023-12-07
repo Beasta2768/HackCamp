@@ -1,3 +1,26 @@
-<?php require('template/header.phtml') ?>
-<div>adam was here</div>
-<?php require('template/footer.phtml') ?>
+ <?php require('template/header.phtml') ?>
+ <?php require('Views/sidebar.phtml') ?>
+<!-- Chat -->
+<div class="main-content d-flex " style="height: 100vh">
+    <div class="container mt-auto ">
+
+    <div class=" ">
+    <?php foreach ($view->chatMsg as $msg): ?>
+        <?php if(fmod($view->count,2) == 0 ) :?>
+            <p ><?php echo $msg ?></p>
+            <br>
+        <?php else: ?>
+            <p class="float-end"><?php echo $msg ?></p>
+            <br>
+        <?php endif; ?>
+        <?php $view->count ++ ?>
+    <?php endforeach; ?>
+    </div>
+       <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+    <input type="text" id="user-input" placeholder="Type your message..." name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+    <div id="file-upload">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit" id="submit_button" value="Send" name="chatSnd">
+    </div>
+       </form>
+</div>
