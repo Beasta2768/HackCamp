@@ -1,0 +1,156 @@
+body {
+    font-family: Cambria, sans-serif;
+    font-size: 20px; /* Adjust the base font size for better readability */
+    margin: 0; /* Remove default margin */
+    overflow-x:hidden;
+}
+
+.header {
+    border: 5px solid #373737;
+    padding: 1px;
+	color: white;
+	height: 200px;
+	background-color: #36454F
+}
+    
+img#logo {
+    width: 510px; /* Adjust the width as needed */
+    display: inline-block; /* Align the image as an inline-block element */
+	margin-left: 5vh;
+}
+
+.menu {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: 5px solid #373737;
+    height: 70vh; /* Use viewport height for full height */
+    overflow-y: auto;
+    background-color: #36454F;
+    color: white;
+}
+
+#chat-container {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto; /* Center the chat container */
+    border: 5px solid #373737;
+    overflow: hidden;
+	background-color: white;
+	height:74vh;
+	color: black;
+
+}
+
+
+#chat-messages {
+    position: relative;
+    padding: 10px;
+    height: 62vh;
+    overflow-y: auto;
+    background-color: #white;
+	 border-radius: 25px;
+}
+
+#user-input {
+    position: relative;
+    width: calc(100% ); /* Adjust input width */
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-top: 10px solid #ccc;
+    outline: none;
+    margin: 0;
+	background-color: white;
+	color: black;
+	font-size: 20px;
+}
+
+#submit_button, #search_button {
+	
+	
+	float: right; /* Float the button to the right */
+            margin-right: 10px; /* Add some space between the button and the right edge */
+			float: top;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+	
+	
+}
+
+#myFile {
+
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-open .nav {
+    transform: translateX(0)
+}
+
+.nav-open .main {
+    transform: translateX(270px);
+}
+
+.nav {
+    width: 13em;
+    height: 78vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #009578;
+    transform: translateX(-270px);
+    transition: transform 0.2s;
+    overflow: hidden;
+}
+
+.nav-close {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 15px 25px;
+    color: #dddddd;
+    cursor: pointer;
+}
+
+.nav-links-container {
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.15)
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #dddddd
+
+}
+
+.nav-text {
+    font-size: 22px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 500;
+}
+
+.main {
+    transition: transform 0.2s;
+
+}
+#file-upload {
+    position: relative;
+    padding: 1px;
+}
+	
