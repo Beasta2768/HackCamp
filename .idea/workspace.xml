@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="newest newest code" />
+    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="adam changed here">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +17,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="02634196-2222-44a3-b227-c5c3cf37e91d" name="localhost" port="8008" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
@@ -30,6 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "adam",
     "last_opened_file_path": "C:/Users/royal/OneDrive - University of Salford/SPAT/Hackcamp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -37,6 +46,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -74,8 +88,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="newest newest code" />
-    <option name="LAST_COMMIT_MESSAGE" value="newest newest code" />
+    <MESSAGE value="adam changed here" />
+    <option name="LAST_COMMIT_MESSAGE" value="adam changed here" />
   </component>
 </project>
