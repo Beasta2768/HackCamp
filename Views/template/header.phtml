@@ -1,40 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--    <link rel="stylesheet" href="bootstrap.min.css">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <title>Intelligent Mind</title>
 
 </head>
-<div class="header">
-    <!-- Change title -->
-    <h1><img src="../image/banner2.jpeg" id="logo" alt="LOGO"> </h1>
-</div>
-<!-- MENU Page perhaps Chat history -->
-<body class="nav-open">
-<main class="main">
-    <button type="button" onclick="toggleNav()">Toggle Conversation History</button>
-</main>
-<nav class="nav">
-    <div class="search">
-        <input type="text" placeholder="Search..">
-        <button type="button" class="btn btn-success">Search</button>
-    </div>
-    <div class="nav-links-container">
-        <a class="nav-link" href="#"> <!-- change this to match conversation history -->
-            <span class="nav-text">History1</span>
-        </a>
-    </div>
-</nav>
 
-<script>
-    function toggleNav() {
-        document.body.classList.toggle("nav-open");
-    }
 
-    document.querySelector(".nav-close").addEventListener("click", () => {
-        toggleNav();
-    })
-</script>
