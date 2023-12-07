@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--    <link rel="stylesheet" href="bootstrap.min.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Ai Data with ABl">
-    <meta name="author" content="Group 16">
+    <title>Intelligent Mind</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
-
-    <!--Custom Css For Minor Adjustments   -->
-    <link href="css/my-style.css" rel="stylesheet" >
-
-    <title><?php echo $view->pageTitle; ?></title>
 </head>
+<div class="header">
+    <!-- Change title -->
+    <h1><img src="../image/banner2.jpeg" id="logo" alt="LOGO"> </h1>
+</div>
+<!-- MENU Page perhaps Chat history -->
+<body class="nav-open">
+<main class="main">
+    <button type="button" onclick="toggleNav()">Toggle Conversation History</button>
+</main>
+<nav class="nav">
+    <div class="search">
+        <input type="text" placeholder="Search..">
+        <button type="button" class="btn btn-success">Search</button>
+    </div>
+    <div class="nav-links-container">
+        <a class="nav-link" href="#"> <!-- change this to match conversation history -->
+            <span class="nav-text">History1</span>
+        </a>
+    </div>
+</nav>
 
-<body role="document" >
+<script>
+    function toggleNav() {
+        document.body.classList.toggle("nav-open");
+    }
 
-<div class="container-fluid">
-    <div class="row flex-nowrap">
-        <div class="col-auto col-md-2 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline"> <?php echo $view->pageTitle ?> </span>
-                </a>
-                <!--Sidebar List Goes Here-->
-                <hr>
-            </div>
-        </div>
-        <div class="col py-3 bg-white">
-        <main class=" text-center m-auto">
+    document.querySelector(".nav-close").addEventListener("click", () => {
+        toggleNav();
+    })
+</script>

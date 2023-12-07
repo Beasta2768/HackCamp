@@ -1,6 +1,6 @@
 <?php
-
 $view = new stdClass();
-$view->pageTitle = 'Home Page';
+$view->pageTitle = 'Intelligent Minds';
+
 
 require_once('Views/index.phtml');

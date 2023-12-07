@@ -1,3 +1,12 @@
 <?php require('template/header.phtml') ?>
+<!-- Chat -->
+<div id="chat-container">
+    <div id="chat-messages"></div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <div id="file-upload">
+    <input type="file" id="myFile" name="filename">
 
-<?php require('template/footer.phtml') ?>
+    <input type="submit" id="submit_button" name="submit">
+    </div>
+</div>
+<?php require ('template/footer.phtml');
