@@ -16,10 +16,11 @@ def airesponse():
     chat = ChatOpenAI()
     conversation = chat(
         [
+            SystemMessage(content="you are a helpful assistant that "),
             HumanMessage(
                 content=request.args.get('prompt')
             ),
-            AIMessage(content="J'adore la programmation.", additional_kwargs={}, example=False)
+
         ]
     )
     print(request.args.get('prompt'))
