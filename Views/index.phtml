@@ -18,9 +18,10 @@
     </div>
        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
     <input type="text" id="user-input" placeholder="Type your message..." name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-    <div id="file-upload">
+    <div id="button">
         <input type="file" id="myFile" name="filename">
         <input type="submit" id="submit_button" value="Send" name="chatSnd">
     </div>
        </form>
+        <?php require('template/footer.phtml') ?>
 </div>

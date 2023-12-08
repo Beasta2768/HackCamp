@@ -78,11 +78,8 @@ img#logo {
 }
 
 #submit_button {
-	
-	
+
 	float: right; /* Float the button to the right */
-            margin-right: 10px; /* Add some space between the button and the right edge */
-			float: top;
             background-color: #4CAF50;
             color: #fff;
             padding: 10px 15px;
@@ -90,8 +87,6 @@ img#logo {
             border: none;
             border-radius: 5px;
             cursor: pointer;
-	
-	
 }
 
 #myFile {
@@ -105,20 +100,10 @@ img#logo {
     cursor: pointer;
 }
 
-
-
-
 #file-upload {
     position: relative;
     padding: 1px;
 }
-
- *{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: "Segoe UI", serif;
- }
 
 .use-img{
     width: 50px;
@@ -173,7 +158,7 @@ img#logo {
 
 .sidebar .top .search {
     color: #fff;
-    display: flex;
+
     height: 50px;
     width: 100%;
     align-items: center;
