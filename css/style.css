@@ -1,3 +1,18 @@
+h1, small {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    font-family: bebas-neue-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: #ffffff !important;
+}
+
+small {
+    font-size: 10px;
+    font-family: ColfaxAI, helvetica, sans-serif;
+}
+
 body {
     font-family: Cambria, sans-serif;
     font-size: 20px; /* Adjust the base font size for better readability */
@@ -10,7 +25,7 @@ body {
     padding: 1px;
 	color: #fff;
 	height: 200px;
-	background-color: #36454F
+	background-color: #ffffff
 }
     
 img#logo {
@@ -97,7 +112,7 @@ img#logo {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family: "Segoe UI";
+     font-family: "Segoe UI", serif;
  }
 
 .use-img{
@@ -112,7 +127,7 @@ img#logo {
     left: 0;
     height: 100vh;
     width: 80px;
-    background-color: #36454F;
+    background-color: #002b37;
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
 }
