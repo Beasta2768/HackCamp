@@ -7,21 +7,26 @@ from flask import jsonify,Flask,request,Blueprint
 
 app = Flask(__name__)
 
-load_dotenv("llm.env")
+dotenv.load_dotenv("llm.env")
 
 
 
 @app.route('/')
-def aiResponse():
+def airesponse():
     chat = ChatOpenAI()
     conversation = chat(
         [
             HumanMessage(
-                content="What is the capital of Ghana"
+                content=request.args.get('prompt')
             ),
             AIMessage(content="J'adore la programmation.", additional_kwargs={}, example=False)
         ]
     )
-    return jsonify({'response':conversation.content})
+    print(request.args.get('prompt'))
+    return jsonify({'response': conversation.content})
+
 
 app.run(debug=True)
+
+
+
