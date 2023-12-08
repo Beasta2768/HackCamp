@@ -1,5 +1,22 @@
 <?php require('template/header.phtml') ?>
 
-<p><?php echo $view->aiResponse ?></p>
-
+<div class="d-flex ">
+    <div class="container ">
+        <div class="border border-warning">
+                <?php foreach ($view->conversations as $msg): ?>
+                        <p class="float-start"><?php echo $msg->getPrompt() ?></p>
+                        <br>
+                        <p class="float-end"><?php echo $msg->getResponse() ?></p>
+                        <br>
+                <?php endforeach; ?>
+        </div>
+        <form class="bottom-0 " method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <div class="form-group col ">
+                <div class="input-group">
+                    <input  class="form-control" type="text"  placeholder="Type your message..." name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+                    <input class="btn btn-primary" type="submit"  value="Send" name="chatSnd">
+                </div>
+            </div>
+        </form>
+    </div>
 <?php require('template/footer.phtml') ?>
