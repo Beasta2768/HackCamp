@@ -8,6 +8,11 @@ h1, small {
     color: #ffffff !important;
 }
 
+h6 {
+    font-family:bebas-neue-pro, sans-serif;
+    color:#ffffff !important;
+}
+
 small {
     font-size: 10px;
     font-family: ColfaxAI, helvetica, sans-serif;

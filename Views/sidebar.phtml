@@ -1,11 +1,12 @@
  <!-- MENU Page perhaps Chat history -->
- <div class="sidebar  ">
+ <div class="sidebar">
      <div class="top">
          <i class="bx bx-menu " id="btn"></i>
      </div>
      <br/>
      <br/>
      <div class="bx sidebar-search">
+         <h6>Conversation History</h6>
          <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
              <input type="text" id="user-search" placeholder="Search..." name="searchMsg" value="<?php if (isset($_POST['searchMsg'])){ echo $_POST['searchMsg'];}?>">
          </form>
