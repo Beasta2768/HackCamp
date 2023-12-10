@@ -119,6 +119,10 @@ img#logo {
 
     padding: 1rem;
 }
+:root {
+    --bs-tertiary-bg: #fffffff;
+}
+
 
 #footer {
     color: #eeeeee
