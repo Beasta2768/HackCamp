@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="Cleaned up code, fixed the footer">
-      <change beforePath="$PROJECT_DIR$/.idea/HackCamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HackCamp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="Fully optimised code to be mobile device friendly." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +84,7 @@
       <workItem from="1701965032650" duration="260000" />
       <workItem from="1702026819188" duration="22114000" />
       <workItem from="1702140674191" duration="18443000" />
-      <workItem from="1702215689224" duration="1939000" />
+      <workItem from="1702215689224" duration="2258000" />
     </task>
     <task id="LOCAL-00001" summary="newest newest code">
       <created>1701964173572</created>
@@ -130,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702041619336</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fully optimised code to be mobile device friendly.">
+      <option name="closed" value="true" />
+      <created>1702217932288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702217932288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +144,7 @@
     <MESSAGE value="Added Ai Title and changed up the color scheme to match &#10;page colour from bootstrap" />
     <MESSAGE value="Added text to sidebar" />
     <MESSAGE value="Cleaned up code, fixed the footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up code, fixed the footer" />
+    <MESSAGE value="Fully optimised code to be mobile device friendly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully optimised code to be mobile device friendly." />
   </component>
 </project>
