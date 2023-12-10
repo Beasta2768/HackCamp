@@ -1,10 +1,12 @@
- <?php require('template/header.phtml') ?>
- <?php require('Views/sidebar.phtml') ?>
+ <?php
+ require('template/header.phtml');
+ require('Views/template/sidebar.phtml');
+ ?>
 <!-- Chat -->
 <div class="main-content d-flex " style="height: 94vh">
     <div class="container mt-auto ">
 
-    <div class=" ">
+    <div>
     <?php foreach ($view->chatMsg as $msg): ?>
         <?php if(fmod($view->count,2) == 0 ) :?>
             <p ><?php echo $msg ?></p>
@@ -23,5 +25,13 @@
         <input type="submit" id="submit_button" value="Send" name="chatSnd">
     </div>
        </form>
-        <?php require('template/footer.phtml') ?>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+        <div class=" input-group mb-3">
+            <input type="file" class="form-control" id="myFile" name="filename">
+            <input type="text" id="user-input" class="form-control" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+            <input class="btn btn-outline-secondary" id="submit_button" value="Submit" type="submit">
+        </div>
+        </form>
+
+ <?php require('template/footer.phtml') ?>
 </div>

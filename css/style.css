@@ -8,15 +8,17 @@ h1, small {
     color: #ffffff !important;
 }
 
-h6 {
+h4, h6 {
     font-family:bebas-neue-pro, sans-serif;
     color:#ffffff !important;
+    padding: 5px
 }
 
 small {
-    font-size: 10px;
+
     font-family: ColfaxAI, helvetica, sans-serif;
 }
+
 
 body {
     font-family: Cambria, sans-serif;
@@ -40,20 +42,6 @@ img#logo {
 }
 
 
-
-#main-content {
-    position: relative;
-    max-width: 80%;
-    margin: 0 auto; /* Center the chat container */
-    border: 5px solid #373737;
-    overflow: hidden;
-	background-color: #fff;
-	height:74vh;
-	color: black;
-
-}
-
-
 #chat-messages {
     position: relative;
     padding: 10px;
@@ -64,43 +52,37 @@ img#logo {
 }
 
 #user-input {
-    position: relative;
-    width: calc(100% ); /* Adjust input width */
-    padding: 10px;
-    box-sizing: border-box;
-    border: none;
-    border-top: 10px solid #ccc;
-    outline: none;
-    margin: 0;
+
 	background-color: #fff;
-	color: black;
+
 	font-size: 20px;
 }
 
-#submit_button {
+.form-control {
+    color: #000000;
+}
 
-	float: right; /* Float the button to the right */
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 15px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+#submit_button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 #myFile {
 
-    background-color: #4CAF50;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px 15px;
     font-size: 16px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #file-upload {
+    background-color: #ffffff;
+    color: #000000;
     position: relative;
     padding: 1px;
 }
@@ -111,158 +93,33 @@ img#logo {
     border: 1px solid #eee;
 }
 
-.sidebar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80px;
-    background-color: #002b37;
-    padding: 0.4rem 0.8rem;
-    transition: all 0.5s ease;
-}
-
-.sidebar.active ~ .main-content{
-    left: 250px;
-    width: calc(100% - 250px);
-
-}
-
-.sidebar.active{
-    width: 250px;
-}
-
-.sidebar-search{
-    opacity: 0;
-}
-.sidebar-search.active {
-    opacity: 1;
-}
-
-
-
-.sidebar #btn {
-    position: absolute;
-    color: #fff;
-    top: 0.4rem;
-    left: 50%;
-    font-size: 1.2rem;
-    line-height: 50px;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
-.sidebar.active #btn {
-    left: 90%;
-}
-
-.sidebar .top .search {
-    color: #fff;
-
-    height: 50px;
-    width: 100%;
-    align-items: center;
-    pointer-events: none;
-    opacity: 0;
-}
-
-.sidebar.active .top .search{
-    opacity: 1;
-}
 
 .top .search i {
     font-size: 2rem;
     margin-right: 5px;
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
+.btn-primary{
+    background-color: #0f3854;
+    --bs-btn-border-color: #000000;
+    --bs-btn-bg: #002b37;
+    --bs-btn-hover-bg: #0f3854;
+    --bs-btn-hover-border-color: #002b37;
+    --bs-btn-active-bg: #0f3854;
+
 }
 
-.user p {
-    color: #fff;
-    opacity: 1;
-    margin-left: 1rem;
-}
+.main-content {
 
-.bold {
-    font-weight: 600;
-}
-
-.sidebar p{
-    opacity: 0;
-}
-
-.sidebar.active p{
-    opacity: 1;
-}
-.sidebar ul li {
-    position: relative;
-    list-style-type: none;
-    height: 50px;
-    width: 90%;
-    margin: 0.8rem auto;
-    line-height: 50px;
-}
-
-.sidebar ul li a{
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 0.8rem;
-}
-
-.sidebar ul li a:hover{
-    background-color: #fff;
-    color: #12171e;
-}
-
-.sidebar ul li a i{
-    min-width: 50px;
-    text-align: center;
-    height: 50px;
-    border-radius: 12px;
-    line-height: 50px;
-}
-
-.sidebar .nav-item{
-    opacity: 0;
-}
-.sidebar.active .nav-item{
-    opacity: 1;
-}
-
-.sidebar ul li .tooltip{
-    position: absolute;
-    left: 125px;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
-    border-radius: 0.6rem;
-    padding: 0.4rem 1.2rem;
-    line-height: 1.8rem;
-    z-index: 20;
-    opacity: 0;
-}
-
-.sidebar ul li:hover .tooltip{
-    opacity: 1;
-}
-
-.sidebar.active ul li .tooltip{
-    display: none;
-}
-
-.main-content{
-    position: relative;
     background-color: #eee;
-
+    margin: 0 auto;
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
-    width: calc(100% - 80px);
+
     padding: 1rem;
+}
+
+#footer {
+    color: #eeeeee
 }
