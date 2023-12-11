@@ -1,33 +1,16 @@
 import dotenv
 from dotenv import load_dotenv
 from langchain.chat_models import ChatOpenAI
-from langchain.schema import HumanMessage, SystemMessage,AIMessage
-from flask import jsonify,Flask,request,Blueprint
-
-
-app = Flask(__name__)
+from langchain.schema import HumanMessage, SystemMessage
+from langchain.chains import ConversationChain
 
 dotenv.load_dotenv("llm.env")
 
 
-
-@app.route('/')
-def airesponse():
+class llmCall:
     chat = ChatOpenAI()
-    conversation = chat(
-        [
-            SystemMessage(content="you are a helpful assistant that "),
-            HumanMessage(
-                content=request.args.get('prompt')
-            ),
+    conversation = ConversationChain(llm=chat)
 
-        ]
-    )
-    print(request.args.get('prompt'))
-    return jsonify({'response': conversation.content})
-
-
-app.run(debug=True)
-
-
-
+    def newprompt(self, prompt):
+        nprompt = self.conversation.run(prompt)
+        return nprompt
