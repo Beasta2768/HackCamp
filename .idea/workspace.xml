@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="first class">
-      <change afterPath="$PROJECT_DIR$/Models/ConversationsData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/ConversationsDataSet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DifferentChatsData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Models/DifferentChatsDataSet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="Fully optimised code to be mobile device friendly." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,28 +13,18 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Adamsami7"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="2bd27354-4598-4d5c-bbd2-c210b3e796f9" />
-        <option name="url" value="https://github.com/Beasta2768/HackCamp.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="PhpServers">
-    <servers>
-      <server host="localhost" id="02634196-2222-44a3-b227-c5c3cf37e91d" name="localhost" port="8008" />
-    </servers>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
@@ -56,30 +40,36 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;adam&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/OneDrive - University of Salford/SPAT/Hackcamp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/PhpstormProjects/cssystems&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sgc406\Downloads\Hackcamp\Views" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\royal\OneDrive - University of Salford\SPAT\Hackcamp\Views\template" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Built-in Web Server.Do it NOW">
+    <configuration name="sidebar.phtml" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Hackcamp/Views/template/sidebar.phtml" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Do it NOW" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8008">
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.sidebar.phtml" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,9 +81,10 @@
       <updated>1701943890468</updated>
       <workItem from="1701943891207" duration="19148000" />
       <workItem from="1701964992833" duration="39000" />
-      <workItem from="1701965032650" duration="114000" />
-      <workItem from="1701972483628" duration="31000" />
-      <workItem from="1702024832162" duration="2400000" />
+      <workItem from="1701965032650" duration="260000" />
+      <workItem from="1702026819188" duration="22114000" />
+      <workItem from="1702140674191" duration="18443000" />
+      <workItem from="1702215689224" duration="2258000" />
     </task>
     <task id="LOCAL-00001" summary="newest newest code">
       <created>1701964173572</created>
@@ -102,64 +93,58 @@
       <option name="project" value="LOCAL" />
       <updated>1701964173572</updated>
     </task>
-    <task id="LOCAL-00002" summary="database connection test">
+    <task id="LOCAL-00002" summary="newest newest code">
       <option name="closed" value="true" />
-      <created>1701970657852</created>
+      <created>1701965209094</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1701970657852</updated>
+      <updated>1701965209095</updated>
     </task>
-    <task id="LOCAL-00003" summary="database connection test">
+    <task id="LOCAL-00003" summary="Added Ai Title and changed up the color scheme to match &#10;page colour from bootstrap">
       <option name="closed" value="true" />
-      <created>1701970749470</created>
+      <created>1702034365837</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1701970749470</updated>
+      <updated>1702034365837</updated>
     </task>
-    <task id="LOCAL-00004" summary="first class">
+    <task id="LOCAL-00004" summary="Added text to sidebar">
       <option name="closed" value="true" />
-      <created>1701971331170</created>
+      <created>1702035834383</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1701971331170</updated>
+      <updated>1702035834383</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleaned up code, fixed the footer">
+      <option name="closed" value="true" />
+      <created>1702041619336</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041619336</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fully optimised code to be mobile device friendly.">
+      <option name="closed" value="true" />
+      <created>1702217932288</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702217932288</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/ryan" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="newest newest code" />
-    <MESSAGE value="adam changed here" />
-    <MESSAGE value="database connection test" />
-    <MESSAGE value="first class" />
-    <option name="LAST_COMMIT_MESSAGE" value="first class" />
+    <MESSAGE value="Added Ai Title and changed up the color scheme to match &#10;page colour from bootstrap" />
+    <MESSAGE value="Added text to sidebar" />
+    <MESSAGE value="Cleaned up code, fixed the footer" />
+    <MESSAGE value="Fully optimised code to be mobile device friendly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fully optimised code to be mobile device friendly." />
   </component>
 </project>
