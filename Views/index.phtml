@@ -3,28 +3,53 @@
  require('Views/template/sidebar.phtml');
  ?>
 <!-- Chat -->
-<div class="main-content d-flex " style="height: 94vh">
-    <div class="container mt-auto ">
+<div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
+    <div class="container mt-auto row">
+        <?php if (!isset($view->conversations) OR count($view->conversations) == 0   ): ?>
+        <div class="row">
 
-    <div>
-    <?php foreach ($view->chatMsg as $msg): ?>
-        <?php if(fmod($view->count,2) == 0 ) :?>
-            <p ><?php echo $msg ?></p>
-            <br>
-        <?php else: ?>
-            <p class="float-end"><?php echo $msg ?></p>
-            <br>
-        <?php endif; ?>
-        <?php $view->count ++ ?>
-    <?php endforeach; ?>
-    </div>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-        <div class=" input-group mb-3">
-            <input class="form-control" type="file" id="myFile" name="filename">
-            <input class="form-control" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-            <input class="btn btn-outline-secondary" id="submit_button" value="Submit" type="submit">
+            <div class="col-md col-sm-1">
+                <h2>Prompts relating to the file to give the ChatBot </h2>
+                <ul>
+                    <li>Counting the total number of columns</li>
+                    <li>Counting the total number of rows</li>
+                    <li>Stating the data "column name" given column</li>
+                    <li>Counting the number of blank or non-blank values of a column</li>
+                    <li>For number columns, calculating the average, min, max or sum of the column</li>
+                    <li>For text columns, calculating the maximum character length</li>
+                    <li>Grouping by any column and counting each value</li>
+                </ul>
+            </div>
+
+            <div class=" col-md col-sm-1">
+                <h2>Normal prompts to give to the ChatBot</h2>
+                <ul>
+                    <li>Square root of "number"</li>
+                    <li>give me directions from "city" to "city"</li>
+                    <li>Square "number"</li>
+                </ul>
+            </div>
         </div>
-        </form>
 
- <?php require('template/footer.phtml') ?>
+        <?php endif; ?>
+
+        <div class="row">
+            <?php foreach ($view->conversations as $msg): ?>
+                <p class="float-start"><?php echo $msg->getPrompt() ?></p>
+                <br>
+                <p class="float-end"><?php echo $msg->getResponse() ?></p>
+                <br>
+            <?php endforeach; ?>
+        </div>
+
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" class="row">
+            <div class=" input-group mb-3">
+                <input class="form-control" type="file" id="myFile" name="filename">
+                <input class="form-control w-25" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+                <input class="btn btn-outline-secondary" id="submit_button" name="submit" value="Submit" type="submit">
+            </div>
+        </form>
+        <div class="row">
+            <?php require('template/footer.phtml') ?>
+        </div>
 </div>
