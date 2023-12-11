@@ -54,7 +54,6 @@ img#logo {
 #user-input {
 
 	background-color: #fff;
-
 	font-size: 20px;
 }
 
@@ -116,7 +115,6 @@ img#logo {
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
-
     padding: 1rem;
 }
 :root {
@@ -125,5 +123,6 @@ img#logo {
 
 
 #footer {
-    color: #eeeeee
+    color: #eeeeee;
+
 }

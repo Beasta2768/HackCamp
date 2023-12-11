@@ -1,11 +1,10 @@
  <?php
  require('template/header.phtml');
- require('Views/template/sidebar.phtml');
  ?>
 <!-- Chat -->
 <div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
     <div class="container mt-auto row">
-        <?php if (!isset($view->conversations) OR count($view->conversations) == 0   ): ?>
+        <?php if (!isset($view->chatMsg) OR count($view->chatMsg) == 0   ): ?>
         <div class="row">
 
             <div class="col-md col-sm-1">
@@ -33,23 +32,26 @@
 
         <?php endif; ?>
 
+        <?php if (!isset($view->chatMsg)):?>
         <div class="row">
-            <?php foreach ($view->conversations as $msg): ?>
-                <p class="float-start"><?php echo $msg->getPrompt() ?></p>
+                <p class="float-start"><?php echo $view->chatMsg[0] ?></p>
                 <br>
-                <p class="float-end"><?php echo $msg->getResponse() ?></p>
+                <p class="float-end"><?php echo $view->chatMsg[1] ?></p>
                 <br>
-            <?php endforeach; ?>
         </div>
+        <?php endif; ?>
 
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" class="row">
-            <div class=" input-group mb-3">
-                <input class="form-control" type="file" id="myFile" name="filename">
-                <input class="form-control w-25" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-                <input class="btn btn-outline-secondary" id="submit_button" name="submit" value="Submit" type="submit">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+            <div class=" input-group mb-3, row">
+                <div class="col-md col-sm-1 p-0">
+                    <input class="form-control" type="file" id="myFile" name="filename">
+                </div>
+                <div class="col-md col-sm-1 d-flex p-0">
+                    <input class="form-control w-35" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+                    <input class="btn btn-outline-secondary" id="submit_button" name="submit" value="Submit" type="submit">
+                </div>
             </div>
         </form>
-        <div class="row">
-            <?php require('template/footer.phtml') ?>
-        </div>
+    </div>
 </div>
+<?php require('template/footer.phtml') ?>
