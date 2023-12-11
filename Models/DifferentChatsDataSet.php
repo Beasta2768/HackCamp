@@ -9,7 +9,7 @@ class DifferentChatsDataSet {
         $this->_dbHandle = $this->_dbInstance->getdbConnection();
     }
 
-    public function fetchAllStudents() {
+    public function fetchAllChats() {
         $sqlQuery = 'SELECT * FROM different_chats';
 
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
@@ -20,5 +20,16 @@ class DifferentChatsDataSet {
             $dataSet[] = new DifferentChatsData($row);
         }
         return $dataSet;
+    }
+
+    public function createChat($chatName){
+        $sqlQuery = 'insert into different_chats (chat) values (?)';
+
+        $statement = $this->_dbHandle->prepare($sqlQuery);
+        $statement->bindParam(1,$chatName);
+
+        $statement->execute();
+
+        $statement->rowCount();
     }
 }

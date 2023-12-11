@@ -1,43 +1,42 @@
- <?php
- require('template/header.phtml');
- ?>
+<?php require('template/header.phtml'); ?>
 <!-- Chat -->
 <div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
     <div class="container mt-auto row">
-        <?php if (!isset($view->chatMsg) OR count($view->chatMsg) == 0   ): ?>
-        <div class="row">
+        <?php if (!isset($view->conversations)): ?>
+            <div class="row">
 
-            <div class="col-md col-sm-1">
-                <h2>Prompts relating to the file to give the ChatBot </h2>
-                <ul>
-                    <li>Counting the total number of columns</li>
-                    <li>Counting the total number of rows</li>
-                    <li>Stating the data "column name" given column</li>
-                    <li>Counting the number of blank or non-blank values of a column</li>
-                    <li>For number columns, calculating the average, min, max or sum of the column</li>
-                    <li>For text columns, calculating the maximum character length</li>
-                    <li>Grouping by any column and counting each value</li>
-                </ul>
+                <div class="col-md col-sm-1">
+                    <h2>Prompts relating to the file to give the ChatBot </h2>
+                    <ul>
+                        <li>Counting the total number of columns</li>
+                        <li>Counting the total number of rows</li>
+                        <li>Stating the data "column name" given column</li>
+                        <li>Counting the number of blank or non-blank values of a column</li>
+                        <li>For number columns, calculating the average, min, max or sum of the column</li>
+                        <li>For text columns, calculating the maximum character length</li>
+                        <li>Grouping by any column and counting each value</li>
+                    </ul>
+                </div>
+
+                <div class=" col-md col-sm-1">
+                    <h2>Normal prompts to give to the ChatBot</h2>
+                    <ul>
+                        <li>Square root of "number"</li>
+                        <li>give me directions from "city" to "city"</li>
+                        <li>Square "number"</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class=" col-md col-sm-1">
-                <h2>Normal prompts to give to the ChatBot</h2>
-                <ul>
-                    <li>Square root of "number"</li>
-                    <li>give me directions from "city" to "city"</li>
-                    <li>Square "number"</li>
-                </ul>
-            </div>
-        </div>
-
         <?php endif; ?>
 
-        <?php if (!isset($view->chatMsg)):?>
+        <?php if (isset($view->conversations)):?>
         <div class="row">
-                <p class="float-start"><?php echo $view->chatMsg[0] ?></p>
+            <?php foreach ($view->conversations as $msg): ?>
+                <p class="text-start"><?php echo $msg->getPrompt() ?></p>
                 <br>
-                <p class="float-end"><?php echo $view->chatMsg[1] ?></p>
+                <p class="text-end"><?php echo $msg->getResponse() ?></p>
                 <br>
+            <?php endforeach; ?>
         </div>
         <?php endif; ?>
 
