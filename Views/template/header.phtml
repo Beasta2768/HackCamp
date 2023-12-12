@@ -25,10 +25,28 @@
                     <h4 class="offcanvas-title" id="offcanvasExampleLabel">Conversation History</h4>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div>
-                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-                        <input type="text" id="user-search" placeholder="Search..." name="searchMsg" value="<?php if (isset($_POST['searchMsg'])){ echo $_POST['searchMsg'];}?>">
-                    </form>
+
+                <div class="text-center">
+                    <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        New Conversation
+                    </button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body text-white bg-dark mb-0">
+                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                                <input class="form-control" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
+                                <br/>
+                                <input class="btn btn-success" type="submit" value="newChat" name="newChat"/>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <?php foreach ($view->chats as $chat) :?>
+                        <p><?php echo $chat->getChat();?></p>
+                        <?php endforeach;?>
+                    </div>
                 </div>
             </div>
         </div>

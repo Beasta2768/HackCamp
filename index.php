@@ -12,7 +12,8 @@ $conversations = new ConversationsDataSet();
 $newChat = new differentChatsDataSet();
 
 $view->conversations = $conversations->fetchAllConversations();
-$view->count = 0;
+$view->chats = $newChat->fetchAllChats();
+$view->callError = false;
 
 if (isset($_POST['submit'])) {
     $prompt = str_replace(" ","%20",htmlentities($_POST['chatMsg']));
@@ -25,14 +26,17 @@ if (isset($_POST['submit'])) {
 
     $response = json_decode($curl_data);
 
-
+    if(isset($response)){
     $conversations->storeConversation(htmlentities($_POST['chatMsg']),$response->response, 1);
     $view->conversations = $conversations->fetchAllConversations();
-//    echo $response->response;
+    } else{
+        $view->callError = true;
+    }
 }
 
-if(isset($_POST['createNewChat'])){
-    $newChat = $newChat->createChat();
+if(isset($_POST['newChat'])){
+    $newChat->createChat(htmlentities($_POST['newConversationName']));
+    $view->chats = $newChat->fetchAllChats();
 }
 
 require_once('Views/index.phtml');
