@@ -2,7 +2,7 @@
 <!-- Chat -->
 <div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
     <div class="container mt-auto row">
-        <?php if (!isset($view->conversations)): ?>
+        <?php if (count($view->conversations) == 0): ?>
             <div class="row">
 
                 <div class="col-md col-sm-1">
@@ -30,16 +30,17 @@
         <?php endif; ?>
 
         <?php if (isset($view->conversations)):?>
-        <div class="row">
+        <div class="row ">
             <?php foreach ($view->conversations as $msg): ?>
-                <p class="text-start"><?php echo $msg->getPrompt() ?></p>
+                <small class=" bg-dark w-auto ">You</small>
+                <p class="text-center "><?php echo $msg->getPrompt() ?></p>
                 <br>
-                <p class="text-end"><?php echo $msg->getResponse() ?></p>
+                <small class="justify-content-start bg-dark w-auto">AI</small>
+                <p class="text-center "><?php echo $msg->getResponse() ?></p>
                 <br>
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
-
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
             <div class=" input-group mb-3, row">
                 <div class="col-md col-sm-1 p-0">
@@ -51,6 +52,12 @@
                 </div>
             </div>
         </form>
+        <?php if($view->callError):?>
+        <div class="alert alert-dismissible alert-warning text-center">
+            <h4 class="alert-heading">Api Call Error</h4>
+            <p class="mb-0">Seems Like There Was An Issue With The Api Call. Please Try Again Later</p>
+        </div>
+        <?php endif;?>
     </div>
 </div>
 <?php require('template/footer.phtml') ?>

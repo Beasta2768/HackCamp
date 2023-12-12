@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="improved stuff">
+    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="Conversations % LLM Working">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2023_08_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2023_08_42__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_12_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_12_28__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBConnTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/template/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/template/header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/template/sidebar.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +38,12 @@
       <server host="localhost" id="d096258f-4ae3-4c36-81ec-0f91cb46949a" name="localhost" port="8008" />
     </servers>
   </component>
-  <component name="PhpTemplates">
-    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ZD5ccRWU22WkLyEXZbD52QvQGV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,8 +53,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "adam",
-    "last_opened_file_path": "C:/Users/adams/OneDrive - University of Salford/year 2/software projects with agile techniques/HackCampWebsite",
+    "git-widget-placeholder": "ryan",
+    "last_opened_file_path": "C:/Users/royal/PhpstormProjects/cssystems",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,7 +103,6 @@
       <workItem from="1702026819188" duration="22114000" />
       <workItem from="1702140674191" duration="18443000" />
       <workItem from="1702215689224" duration="2258000" />
-      <workItem from="1702371513603" duration="4171000" />
     </task>
     <task id="LOCAL-00001" summary="newest newest code">
       <created>1701964173572</created>
@@ -148,19 +151,34 @@
       <option name="project" value="LOCAL" />
       <updated>1702217932288</updated>
     </task>
-    <task id="LOCAL-00007" summary="improved stuff">
-      <option name="closed" value="true" />
-      <created>1702319714658</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1702319714658</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/adam" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="newest newest code" />
@@ -168,7 +186,7 @@
     <MESSAGE value="Added text to sidebar" />
     <MESSAGE value="Cleaned up code, fixed the footer" />
     <MESSAGE value="Fully optimised code to be mobile device friendly." />
-    <MESSAGE value="improved stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved stuff" />
+    <MESSAGE value="Conversations % LLM Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conversations % LLM Working" />
   </component>
 </project>
