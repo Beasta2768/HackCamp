@@ -126,3 +126,8 @@ img#logo {
     color: #eeeeee;
 
 }
+
+/* Style for the loading spinner */
+#loading {
+    display: none;
+}

@@ -30,25 +30,31 @@
         <?php endif; ?>
 
         <?php if (isset($view->conversations)):?>
-        <div class="row ">
+        <div class="row min-vh-80 overflow-auto ">
             <?php foreach ($view->conversations as $msg): ?>
-                <small class=" bg-dark w-auto ">You</small>
-                <p class="text-center "><?php echo $msg->getPrompt() ?></p>
-                <br>
-                <small class="justify-content-start bg-dark w-auto">AI</small>
-                <p class="text-center "><?php echo $msg->getResponse() ?></p>
-                <br>
+            <div class="d-flex">
+                <small class="bg-primary  mx-0 w-auto ">You</small><small class="text-black">16:32</small>
+            </div>
+                <p class="text-start border border-primary "><?php echo $msg->getPrompt() ?></p>
+
+
+                <small class=" bg-dark w-auto mx-0">AI</small>
+                <p class="text-start border border-dark "><?php echo $msg->getResponse() ?></p>
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <!-- Loading Screen -->
+                <div id="loading" class="">
+                    <img src="/Images/loading.gif" width="75px" height="75px"/>
+                </div>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()">
             <div class=" input-group mb-3, row">
                 <div class="col-md col-sm-1 p-0">
                     <input class="form-control" type="file" id="myFile" name="filename">
                 </div>
                 <div class="col-md col-sm-1 d-flex p-0">
                     <input class="form-control w-35" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-                    <input class="btn btn-outline-secondary" id="submit_button" name="submit" value="Submit" type="submit">
+                    <button class="btn btn-outline-secondary" id="submit_button" name="submit"  type="submit">Submit</button>
                 </div>
             </div>
         </form>
@@ -60,4 +66,12 @@
         <?php endif;?>
     </div>
 </div>
+
+<script>
+    function showLoading() {
+        // Display the loading screen
+        document.getElementById('loading').style.display = 'block';
+    }
+</script>
+
 <?php require('template/footer.phtml') ?>
