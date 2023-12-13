@@ -34,8 +34,9 @@
         <?php if (isset($view->conversations)):?>
         <div class="row min-vh-80 overflow-auto ">
             <?php foreach ($view->conversations as $msg): ?>
-                <div class="user-title">
+                <div class="user-title text-center">
                     <small class="float-end bg-primary  mx-0 w-auto ">You</small>
+                    <small class="text-black"><?php echo $msg->getTimeSent() ?></small>
                 </div>
                 <div class="user">
                     <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
@@ -69,11 +70,11 @@
                 </div>
             </div>
         </form>
-        <?php if($view->callError):?>
-        <div class="alert alert-dismissible alert-warning text-center">
-            <h4 class="alert-heading">Api Call Error</h4>
-            <p class="mb-0">Seems Like There Was An Issue With The Api Call. Please Try Again Later</p>
-        </div>
+        <?php if(isset($view->callError)):?>
+            <div class="alert alert-dismissible alert-warning text-center">
+                <h4 class="alert-heading"><?php echo $view->callError?></h4>
+                <p class="mb-0">Looks Like There Was An <?php echo $view->callError ?>. Please Contact An Administrator For Help</p>
+            </div>
         <?php endif;?>
     </div>
 </div>
@@ -84,5 +85,7 @@
         document.getElementById('loading').style.display = 'block';
     }
 </script>
+
+
 
 <?php require('template/footer.phtml') ?>

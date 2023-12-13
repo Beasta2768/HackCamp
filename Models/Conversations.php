@@ -2,13 +2,14 @@
 
 class Conversations
 {
-    protected $key,$prompt,$response;
+    protected $key,$prompt,$response,$timeSent;
 
     public function __construct($dbRow)
     {
         $this->key = $dbRow['key'];
         $this->prompt = $dbRow['prompt'];
         $this->response = $dbRow['response'];
+        $this->timeSent = $dbRow['timeSent'];
     }
 
     /**
@@ -35,4 +36,11 @@ class Conversations
         return $this->response;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTimeSent(): mixed
+    {
+        return $this->timeSent;
+    }
 }

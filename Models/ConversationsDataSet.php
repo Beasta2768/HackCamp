@@ -22,13 +22,14 @@ class ConversationsDataSet
         return $dataSet;
     }
 
-    public function storeConversation($prompt,$response, $typeOfChat){
-        $sqlQuery = 'insert into conversations (prompt, response, typeOfChat,timeSent) values (?,?,?,"5");';
+    public function storeConversation($prompt,$response, $typeOfChat, $time){
+        $sqlQuery = 'insert into conversations (prompt, response, typeOfChat, timeSent) values (?,?,?,?);';
 
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
         $statement->bindParam(1,$prompt);
         $statement->bindParam(2,$response);
         $statement->bindParam(3, $typeOfChat);
+        $statement->bindParam(4, $time);
         $statement->execute(); // execute the PDO statement
 
         return $statement->rowCount();
