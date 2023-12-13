@@ -16,8 +16,8 @@ $view->chats = $newChat->fetchAllChats();
 $view->callError = false;
 
 if (isset($_POST['submit'])) {
-    sleep(2);
-/*    $prompt = str_replace(" ","%20",htmlentities($_POST['chatMsg']));
+/*
+    $prompt = str_replace(" ","%20",htmlentities($_POST['chatMsg']));
 
     curl_setopt($ch, CURLOPT_URL, "http://realmheart.pythonanywhere.com/?prompt=".$prompt);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     $response = json_decode($curl_data);
 
     if(isset($response)){
-    $conversations->storeConversation(htmlentities($_POST['chatMsg']),$response->response, 1);
+    $conversations->storeConversation(htmlentities($_POST['chatMsg']),$response->response, 1,5);
     $view->conversations = $conversations->fetchAllConversations();
     } else{
         $view->callError = true;

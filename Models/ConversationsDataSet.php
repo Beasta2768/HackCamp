@@ -23,7 +23,7 @@ class ConversationsDataSet
     }
 
     public function storeConversation($prompt,$response, $typeOfChat){
-        $sqlQuery = 'insert into conversations (prompt, response, typeOfChat) values (?,?,?);';
+        $sqlQuery = 'insert into conversations (prompt, response, typeOfChat,timeSent) values (?,?,?,"5");';
 
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
         $statement->bindParam(1,$prompt);
