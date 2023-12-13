@@ -8,48 +8,51 @@
 
 </head>
 
-    <div class="d-flex row" >
-        <div class="col-sm  row-cols-1">
-            <div class="d-flex text-center ">
-                <h1 class="w-auto col-1 ">Intelligent Mind with <small>OpenAI</small></h1>
+    <div>
+        <div class="d-flex row">
+            <div class="col-1">
+                <div class="row ">
+                    <button class="btn btn-primary col-1 mx-2 w-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        ≡
+                    </button>
+                    <h4 class="col-1" ">Menu</h4>
+                </div>
             </div>
-
-            <div class="col-sm ">
-                <button class="btn btn-primary col" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    ≡
-                </button>
-                <h6 class="col" ">Menu</h6>
-            </div>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h4 class="offcanvas-title" id="offcanvasExampleLabel">Conversation History</h4>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div class="d-flex  col-1">
+                    <h1 class="w-auto col-5">Intelligent Mind with <small>OpenAI</small></h1>
                 </div>
 
-                <div class="text-center">
-                    <p>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="offcanvasExampleLabel">Conversation History</h4>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="text-center">
+                <p>
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         New Conversation
                     </button>
-                    </p>
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body text-white bg-dark mb-0">
-                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-                                <input class="form-control" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
-                                <br/>
-                                <input class="btn btn-success" type="submit" value="newChat" name="newChat"/>
-                            </form>
-                        </div>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body text-white bg-dark mb-0">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                            <input class="form-control" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
+                            <br/>
+                            <input class="btn btn-success" type="submit" value="newChat" name="newChat"/>
+                        </form>
                     </div>
+                </div>
 
-                    <div>
-                        <?php foreach ($view->chats as $chat) :?>
+                <div>
+                    <?php foreach ($view->chats as $chat) :?>
                         <p><?php echo $chat->getChat();?></p>
-                        <?php endforeach;?>
-                    </div>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
+
     </div>
 <body class="container-fluid vh-100">
 

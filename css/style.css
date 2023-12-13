@@ -6,6 +6,7 @@ h1, small {
     font-style: normal;
     font-weight: 100;
     color: #ffffff !important;
+
 }
 
 h4, h6 {
@@ -110,6 +111,7 @@ img#logo {
 
 .main-content {
 
+
     background-color: #eee;
     margin: 0 auto;
     top: 0;
@@ -117,6 +119,12 @@ img#logo {
     transition: all 0.5s ease;
     padding: 1rem;
 }
+
+.container2 {
+    max-height: 75vh;
+    overflow: auto;
+}
+
 :root {
     --bs-tertiary-bg: #fffffff;
 }
@@ -130,4 +138,23 @@ img#logo {
 /* Style for the loading spinner */
 #loading {
     display: none;
+}
+
+.float-start{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.float-end{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.border{
+    border-radius: 8px;
+}
+.bg-dark{
+    border-radius: 25px;
+}
+.bg-primary{
+    border-radius: 10px;
 }
