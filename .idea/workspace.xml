@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="post sprint 2 demo + chat interface upgrades">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="loading icon">
+      <change afterPath="$PROJECT_DIR$/Images/AILogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/template/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/template/header.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +99,7 @@
       <workItem from="1702026819188" duration="22114000" />
       <workItem from="1702140674191" duration="18443000" />
       <workItem from="1702215689224" duration="2258000" />
-      <workItem from="1702457835733" duration="6029000" />
+      <workItem from="1702457835733" duration="9197000" />
     </task>
     <task id="LOCAL-00001" summary="newest newest code">
       <created>1701964173572</created>
@@ -155,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702399997862</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="loading icon">
+      <option name="closed" value="true" />
+      <created>1702464566607</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702464566607</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +201,7 @@
     <MESSAGE value="Fully optimised code to be mobile device friendly." />
     <MESSAGE value="Conversations % LLM Working" />
     <MESSAGE value="post sprint 2 demo + chat interface upgrades" />
-    <option name="LAST_COMMIT_MESSAGE" value="post sprint 2 demo + chat interface upgrades" />
+    <MESSAGE value="loading icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading icon" />
   </component>
 </project>
