@@ -58,10 +58,10 @@
                 </div>
             </div>
         </form>
-        <?php if($view->callError):?>
+        <?php if(isset($view->callError)):?>
         <div class="alert alert-dismissible alert-warning text-center">
-            <h4 class="alert-heading">Api Call Error</h4>
-            <p class="mb-0">Seems Like There Was An Issue With The Api Call. Please Try Again Later</p>
+            <h4 class="alert-heading"><?php echo $view->callError?></h4>
+            <p class="mb-0">Looks Like There Was An <?php echo $view->callError ?>. Please Contact An Administrator For Help</p>
         </div>
         <?php endif;?>
     </div>
