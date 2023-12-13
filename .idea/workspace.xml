@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f600679e-e674-4cd4-81d4-5f57bdfa7254" name="Changes" comment="post sprint 2 demo + chat interface upgrades">
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2023_08_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2023_08_42__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_12_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_12_2023_12_28__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_09_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_09_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_10_49__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_10_49__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_11_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_13_12_2023_11_42__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Conversations.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Conversations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ConversationsDataSet.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ConversationsDataSet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/llm.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/openAi.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;adam&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sgc544/OneDrive - University of Salford/HackCamp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/Downloads/Hackcamp&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -70,6 +69,7 @@
       <recent name="C:\Users\sgc406\Downloads\Hackcamp\Views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adams\OneDrive - University of Salford\year 2\software projects with agile techniques\HackCampWebsite\Images" />
       <recent name="C:\Users\royal\OneDrive - University of Salford\SPAT\Hackcamp\Views\template" />
     </key>
   </component>
@@ -104,10 +104,7 @@
       <workItem from="1702026819188" duration="22114000" />
       <workItem from="1702140674191" duration="18443000" />
       <workItem from="1702215689224" duration="2258000" />
-      <workItem from="1702457835733" duration="6029000" />
-      <workItem from="1702476544326" duration="41000" />
-      <workItem from="1702476618232" duration="665000" />
-      <workItem from="1702482047252" duration="13000" />
+      <workItem from="1702457835733" duration="9197000" />
     </task>
     <task id="LOCAL-00001" summary="newest newest code">
       <created>1701964173572</created>
@@ -171,23 +168,26 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Alex" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/adam" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
