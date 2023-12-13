@@ -34,22 +34,20 @@
         <?php if (isset($view->conversations)):?>
         <div class="row min-vh-80 overflow-auto ">
             <?php foreach ($view->conversations as $msg): ?>
+                    <small class="text-black "><?php echo $msg->getTimeSent() ?></small>
                 <div class="user-title text-center">
                     <small class="float-end bg-primary  mx-0 w-auto ">You</small>
-                    <small class="text-black"><?php echo $msg->getTimeSent() ?></small>
                 </div>
                 <div class="user">
-                    <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
+                    <p class="float-end border border-primary chatText"><?php echo $msg->getPrompt() ?></p>
                 </div>
 
-                <h5>AI</h5>
-                <div class="ai-title">
 
-                    <small class="float-start bg-dark w-auto mx-0">ChatMim</small>
+                <div class="ai-title">
+                    <small class="float-start bg-dark w-auto mx-0"><img src="../Images/Hackcamp_Logo.png" width="32px" height="32px">ChatMim</small>
                 </div>
                 <div class="ai_answer">
-
-                    <p class="float-start border border-dark "><?php echo $msg->getResponse() ?></p>
+                    <p class="float-start border border-dark bg-info-subtle chatText"><?php echo $msg->getResponse() ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
