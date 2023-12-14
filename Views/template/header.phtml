@@ -1,13 +1,12 @@
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ubv0wui.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intelligent Mind</title>
 
 </head>
-
     <div>
         <div class="d-flex row">
             <div class="col-1">
@@ -15,7 +14,7 @@
                     <button class="btn btn-primary col-1 mx-2 w-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         ≡
                     </button>
-                    <h4 class="col-1" ">Menu</h4>
+                    <h4 class="col-1">Menu</h4>
                 </div>
             </div>
                 <div class="d-flex  col-1">
@@ -42,6 +41,12 @@
                             <br/>
                             <input class="btn btn-success" type="submit" value="newChat" name="newChat"/>
                         </form>
+                        <?php if($view->chatCreationError):?>
+                            <div class="alert alert-dismissible alert-warning text-center">
+                                <h4 class="alert-heading">Chat Name Already Exists</h4>
+                                <p class="mb-0">Looks Like There Was You Entered A Chat Name That Already Exists.<br/>Please Enter A Different Name</p>
+                            </div>
+                        <?php  endif; ?>
                     </div>
                 </div>
 

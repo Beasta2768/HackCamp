@@ -10,16 +10,19 @@ class DifferentChatsDataSet {
     }
 
     public function fetchAllChats() {
-        $sqlQuery = 'SELECT * FROM different_chats';
+        $sqlQuery = 'SELECT * FROM different_chats order by id';
 
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
-        $statement->execute(); // execute the PDO statement
+
+        $statement->execute();
 
         $dataSet = [];
         while ($row = $statement->fetch()) {
             $dataSet[] = new DifferentChatsData($row);
         }
         return $dataSet;
+
+
     }
 
     public function createChat($chatName){
@@ -28,8 +31,14 @@ class DifferentChatsDataSet {
         $statement = $this->_dbHandle->prepare($sqlQuery);
         $statement->bindParam(1,$chatName);
 
+        try {
         $statement->execute();
+        } catch (Exception  $ex){
+            return false;
+        }
 
-        $statement->rowCount();
+        return true;
     }
+
+
 }
