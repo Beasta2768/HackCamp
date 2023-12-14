@@ -18,6 +18,7 @@ $view->callError = null; // makes an error check to be called in the front end
 $view->time = new DateTime(); // creates new time object
 
 if (isset($_POST['submit'])) {
+/*
     // creates a time object to make a time stamp
     $timeStamp=time();
     $dateTime = new DateTime();
@@ -49,7 +50,7 @@ if (isset($_POST['submit'])) {
 
     /*set the view conversations to get all the conversation from the database
     *for the user to be able to see all the conversations that are stored in the data abase
-    */
+
     $view->conversations = $conversations->fetchAllConversations();
 
 
@@ -59,7 +60,7 @@ if (isset($_POST['submit'])) {
 
 
 
-
+*/
 }
 
 if(isset($_POST['newChat'])){
