@@ -57,9 +57,6 @@ if (isset($_POST['submit'])) {
         $view->callError = $response->error;
     }
 
-
-
-
 }
 
 if(isset($_POST['newChat'])){
