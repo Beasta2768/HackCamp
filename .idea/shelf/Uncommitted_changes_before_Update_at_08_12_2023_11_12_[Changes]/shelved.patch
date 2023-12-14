@@ -1,0 +1,13 @@
+Index: Views/index.phtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php require('template/header.phtml') ?>\r\n\r\n<?php require('template/footer.phtml') ?>\r\n
+===================================================================
+diff --git a/Views/index.phtml b/Views/index.phtml
+--- a/Views/index.phtml	
++++ b/Views/index.phtml	
+@@ -1,3 +1,3 @@
+ <?php require('template/header.phtml') ?>
+-
++<p>Ali's Branch</p>
+ <?php require('template/footer.phtml') ?>
