@@ -1,75 +1,79 @@
-<?php require('template/header.phtml'); ?>
-<!-- Chat -->
+<?php require('template/header.phtml') ?>
+<!--Chat Structure-->
 <div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
     <div class="container mt-auto row">
         <div class="container2 mt-auto mb-3 row border border-dark-subtle ">
+            <!--Check for Conversations-->
+            <?php if (count($view->conversations) == 0): ?>
+                <div class="row">
 
-        <?php if (count($view->conversations) == 0): ?>
-            <div class="row">
+                    <div class="col-md col-sm-1">
+                        <h2>Prompts relating to the file to give the ChatBot </h2>
+                        <ul>
+                            <li>Counting the total number of columns</li>
+                            <li>Counting the total number of rows</li>
+                            <li>Stating the data "column name" given column</li>
+                            <li>Counting the number of blank or non-blank values of a column</li>
+                            <li>For number columns, calculating the average, min, max or sum of the column</li>
+                            <li>For text columns, calculating the maximum character length</li>
+                            <li>Grouping by any column and counting each value</li>
+                        </ul>
+                    </div>
 
-                <div class="col-md col-sm-1">
-                    <h2>Prompts relating to the file to give the ChatBot </h2>
-                    <ul>
-                        <li>Counting the total number of columns</li>
-                        <li>Counting the total number of rows</li>
-                        <li>Stating the data "column name" given column</li>
-                        <li>Counting the number of blank or non-blank values of a column</li>
-                        <li>For number columns, calculating the average, min, max or sum of the column</li>
-                        <li>For text columns, calculating the maximum character length</li>
-                        <li>Grouping by any column and counting each value</li>
-                    </ul>
+                    <div class=" col-md col-sm-1">
+                        <h2>Normal prompts to give to the ChatBot</h2>
+                        <ul>
+                            <li>Square root of "number"</li>
+                            <li>give me directions from "city" to "city"</li>
+                            <li>Square "number"</li>
+                        </ul>
+                    </div>
                 </div>
+            <?php endif; ?>
+            <!--Displays Conversations-->
+            <?php if (isset($view->conversations)):?>
+                <div class="row min-vh-80 overflow-auto ">
+                    <?php foreach ($view->conversations as $msg): ?>
+                        <div class="user-title text-center">
+                            <small class="float-end bg-primary  mx-0 w-auto ">You</small>
+                            <small class="text-black"><?php echo $msg->getTimeSent() ?></small>
+                        </div>
+                        <div class="user">
+                            <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
+                        </div>
 
-                <div class=" col-md col-sm-1">
-                    <h2>Normal prompts to give to the ChatBot</h2>
-                    <ul>
-                        <li>Square root of "number"</li>
-                        <li>give me directions from "city" to "city"</li>
-                        <li>Square "number"</li>
-                    </ul>
-                </div>
-            </div>
-        <?php endif; ?>
+                        <h5>AI</h5>
+                        <div class="ai-title">
 
-        <?php if (isset($view->conversations)):?>
-        <div class="row min-vh-80 overflow-auto ">
-            <?php foreach ($view->conversations as $msg): ?>
-                <div class="user-title text-center">
-                    <small class="float-end bg-primary  mx-0 w-auto ">You</small>
-                    <small class="text-black"><?php echo $msg->getTimeSent() ?></small>
-                </div>
-                <div class="user">
-                    <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
-                </div>
+                            <small class="float-start bg-dark w-auto mx-0">ChatMim</small>
+                        </div>
+                        <div class="ai_answer">
 
-                <h5>AI</h5>
-                <div class="ai-title">
-
-                    <small class="float-start bg-dark w-auto mx-0">ChatMim</small>
+                            <p class="float-start border border-dark "><?php echo $msg->getResponse() ?></p>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="ai_answer">
-
-                    <p class="float-start border border-dark "><?php echo $msg->getResponse() ?></p>
-                </div>
-            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        <?php endif; ?>
+        <!--Loading Screen (shown when form is submitted)-->
+        <div id="loading" class="">
+            <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
         </div>
-                <!-- Loading Screen -->
-                <div id="loading" class="">
-                    <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
-                </div>
+        <!--Message Form (showLoading Function)-->
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()">
             <div class=" input-group mb-3, row">
+                <!--File Upload-->
                 <div class="col-md col-sm-1 p-0">
                     <input class="form-control" type="file" id="myFile" name="filename">
                 </div>
+                <!--Message Input and Submit Button-->
                 <div class="col-md col-sm-1 d-flex p-0">
                     <input class="form-control w-35" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
                     <button class="btn btn-outline-secondary" id="submit_button" name="submit"  type="submit">Submit</button>
                 </div>
             </div>
         </form>
+        <!--Error Warning-->
         <?php if(isset($view->callError)):?>
             <div class="alert alert-dismissible alert-warning text-center">
                 <h4 class="alert-heading"><?php echo $view->callError?></h4>
@@ -79,13 +83,11 @@
     </div>
 </div>
 
+<!--Javascript Function to display Loading Screen-->
 <script>
     function showLoading() {
-        // Display the loading screen
         document.getElementById('loading').style.display = 'block';
     }
 </script>
-
-
 
 <?php require('template/footer.phtml') ?>

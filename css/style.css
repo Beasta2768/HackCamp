@@ -6,7 +6,6 @@ h1, small {
     font-style: normal;
     font-weight: 100;
     color: #ffffff !important;
-
 }
 
 h4, h6 {
@@ -16,32 +15,29 @@ h4, h6 {
 }
 
 small {
-
     font-family: ColfaxAI, helvetica, sans-serif;
 }
 
-
 body {
     font-family: Cambria, sans-serif;
-    font-size: 20px; /* Adjust the base font size for better readability */
-    margin: 0; /* Remove default margin */
+    font-size: 20px;
+    margin: 0;
     overflow-x:hidden;
 }
 
 .header {
     border: 5px solid #373737;
     padding: 1px;
-	color: #fff;
-	height: 200px;
-	background-color: #ffffff
-}
-    
-img#logo {
-    width: 510px; /* Adjust the width as needed */
-    display: inline-block; /* Align the image as an inline-block element */
-	margin-left: 5vh;
+    color: #fff;
+    height: 200px;
+    background-color: #ffffff
 }
 
+img#logo {
+    width: 510px;
+    display: inline-block;
+    margin-left: 5vh;
+}
 
 #chat-messages {
     position: relative;
@@ -49,13 +45,12 @@ img#logo {
     height: 62vh;
     overflow-y: auto;
     background-color: #fff;
-	 border-radius: 25px;
+    border-radius: 25px;
 }
 
 #user-input {
-
-	background-color: #fff;
-	font-size: 20px;
+    background-color: #fff;
+    font-size: 20px;
 }
 
 .form-control {
@@ -71,7 +66,6 @@ img#logo {
 }
 
 #myFile {
-
     background-color: #ffffff;
     color: #000000;
     padding: 10px 15px;
@@ -106,12 +100,9 @@ img#logo {
     --bs-btn-hover-bg: #0f3854;
     --bs-btn-hover-border-color: #002b37;
     --bs-btn-active-bg: #0f3854;
-
 }
 
 .main-content {
-
-
     background-color: #eee;
     margin: 0 auto;
     top: 0;
@@ -130,10 +121,8 @@ img#logo {
     --bs-tertiary-bg: #fffffff;
 }
 
-
 #footer {
     color: #eeeeee;
-
 }
 
 /* Style for the loading spinner */
