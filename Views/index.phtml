@@ -1,79 +1,73 @@
-<?php require('template/header.phtml') ?>
-<!--Chat Structure-->
-<div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
+<?php require('template/header.phtml'); ?>
+<!-- Chat -->
+<div class="main-content d-flex col justify-content-center " style="min-height: 90vh; background-color: #006782">
     <div class="container mt-auto row">
-        <div class="container2 mt-auto mb-3 row border border-dark-subtle ">
-            <!--Check for Conversations-->
-            <?php if (count($view->conversations) == 0): ?>
-                <div class="row">
+        <div class="container2 mt-auto mb-3 row border border-dark-subtle bg-white">
 
-                    <div class="col-md col-sm-1">
-                        <h2>Prompts relating to the file to give the ChatBot </h2>
-                        <ul>
-                            <li>Counting the total number of columns</li>
-                            <li>Counting the total number of rows</li>
-                            <li>Stating the data "column name" given column</li>
-                            <li>Counting the number of blank or non-blank values of a column</li>
-                            <li>For number columns, calculating the average, min, max or sum of the column</li>
-                            <li>For text columns, calculating the maximum character length</li>
-                            <li>Grouping by any column and counting each value</li>
-                        </ul>
-                    </div>
+        <?php if (count($view->conversations) == 0): ?>
+            <div class="row">
 
-                    <div class=" col-md col-sm-1">
-                        <h2>Normal prompts to give to the ChatBot</h2>
-                        <ul>
-                            <li>Square root of "number"</li>
-                            <li>give me directions from "city" to "city"</li>
-                            <li>Square "number"</li>
-                        </ul>
-                    </div>
+                <div class="col-md col-sm-1">
+                    <h2>Prompts relating to the file to give the ChatBot </h2>
+                    <ul>
+                        <li>Counting the total number of columns</li>
+                        <li>Counting the total number of rows</li>
+                        <li>Stating the data "column name" given column</li>
+                        <li>Counting the number of blank or non-blank values of a column</li>
+                        <li>For number columns, calculating the average, min, max or sum of the column</li>
+                        <li>For text columns, calculating the maximum character length</li>
+                        <li>Grouping by any column and counting each value</li>
+                    </ul>
                 </div>
-            <?php endif; ?>
-            <!--Displays Conversations-->
-            <?php if (isset($view->conversations)):?>
-                <div class="row min-vh-80 overflow-auto ">
-                    <?php foreach ($view->conversations as $msg): ?>
-                        <div class="user-title text-center">
-                            <small class="float-end bg-primary  mx-0 w-auto ">You</small>
-                            <small class="text-black"><?php echo $msg->getTimeSent() ?></small>
-                        </div>
-                        <div class="user">
-                            <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
-                        </div>
 
-                        <h5>AI</h5>
-                        <div class="ai-title">
-
-                            <small class="float-start bg-dark w-auto mx-0">ChatMim</small>
-                        </div>
-                        <div class="ai_answer">
-
-                            <p class="float-start border border-dark "><?php echo $msg->getResponse() ?></p>
-                        </div>
-                    <?php endforeach; ?>
+                <div class=" col-md col-sm-1">
+                    <h2>Normal prompts to give to the ChatBot</h2>
+                    <ul>
+                        <li>Square root of "number"</li>
+                        <li>give me directions from "city" to "city"</li>
+                        <li>Square "number"</li>
+                    </ul>
                 </div>
-            <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (isset($view->conversations)):?>
+        <div class="row min-vh-80 overflow-auto ">
+            <?php foreach ($view->conversations as $msg): ?>
+                    <small class="time text-black"><?php echo $msg->getTimeSent() ?></small>
+                <div class="user-title text-center">
+                    <small class="float-end bg-primary  mx-0 w-auto ">You</small>
+                </div>
+                <div class="user">
+                    <p class="float-end border border-primary chatText"><?php echo $msg->getPrompt() ?></p>
+                </div>
+
+
+                <div class="ai-title">
+                    <small class="float-start bg-dark w-auto mx-0"><img src="../Images/Hackcamp_Logo.png" width="32px" height="32px" alt="AI">ChatMim</small>
+                </div>
+                <div class="ai_answer">
+                    <p class="float-start border border-dark bg-info-subtle chatText"><?php echo $msg->getResponse() ?></p>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <!--Loading Screen (shown when form is submitted)-->
-        <div id="loading" class="">
-            <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
+        <?php endif; ?>
         </div>
-        <!--Message Form (showLoading Function)-->
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()">
-            <div class=" input-group mb-3, row">
-                <!--File Upload-->
-                <div class="col-md col-sm-1 p-0">
-                    <input class="form-control" type="file" id="myFile" name="filename">
+                <!-- Loading Screen -->
+                <div id="loading" class="">
+                    <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
                 </div>
-                <!--Message Input and Submit Button-->
-                <div class="col-md col-sm-1 d-flex p-0">
-                    <input class="form-control w-35" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-                    <button class="btn btn-outline-secondary" id="submit_button" name="submit"  type="submit">Submit</button>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()" onload="refresh()">
+            <div class="d-flex justify-content-end input-group mb-3 row">
+                <div class="d-flex col-md  p-0 text-end ">
+                    <input class="form-control custom-height" type="file" id="myFile" name="filename">
+                </div>
+                <div class="col-md  d-flex p-0 ">
+                    <input class="form-control custom-height" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required">
+                    <button class="btn btn-outline-secondary custom-height" id="submit_button" name="submit"  type="submit">Submit</button>
                 </div>
             </div>
         </form>
-        <!--Error Warning-->
         <?php if(isset($view->callError)):?>
             <div class="alert alert-dismissible alert-warning text-center">
                 <h4 class="alert-heading"><?php echo $view->callError?></h4>
@@ -83,11 +77,17 @@
     </div>
 </div>
 
-<!--Javascript Function to display Loading Screen-->
 <script>
     function showLoading() {
-        document.getElementById('loading').style.display = 'block';
+        // Display the loading screen
+        document.getElementById('user-input').style.display = 'block';
+    }
+
+    function refresh() {
+        document.getElementById('input_field').reset();
     }
 </script>
+
+
 
 <?php require('template/footer.phtml') ?>
