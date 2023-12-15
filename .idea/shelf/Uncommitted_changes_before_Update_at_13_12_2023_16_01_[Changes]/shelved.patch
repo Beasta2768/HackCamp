@@ -1,0 +1,55 @@
+Index: css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>h1, small {\r\n    margin: auto;\r\n    text-align: center;\r\n    width: 50%;\r\n    font-family: bebas-neue-pro, sans-serif;\r\n    font-style: normal;\r\n    font-weight: 100;\r\n    color: #ffffff !important;\r\n\r\n}\r\n\r\nh4, h6 {\r\n    font-family:bebas-neue-pro, sans-serif;\r\n    color:#ffffff !important;\r\n    padding: 5px\r\n}\r\n\r\nsmall {\r\n\r\n    font-family: ColfaxAI, helvetica, sans-serif;\r\n}\r\n\r\n\r\nbody {\r\n    font-family: Cambria, sans-serif;\r\n    font-size: 20px; /* Adjust the base font size for better readability */\r\n    margin: 0; /* Remove default margin */\r\n    overflow-x:hidden;\r\n}\r\n\r\n.header {\r\n    border: 5px solid #373737;\r\n    padding: 1px;\r\n\tcolor: #fff;\r\n\theight: 200px;\r\n\tbackground-color: #ffffff\r\n}\r\n    \r\nimg#logo {\r\n    width: 510px; /* Adjust the width as needed */\r\n    display: inline-block; /* Align the image as an inline-block element */\r\n\tmargin-left: 5vh;\r\n}\r\n\r\n\r\n#chat-messages {\r\n    position: relative;\r\n    padding: 10px;\r\n    height: 62vh;\r\n    overflow-y: auto;\r\n    background-color: #fff;\r\n\t border-radius: 25px;\r\n}\r\n\r\n#user-input {\r\n\r\n\tbackground-color: #fff;\r\n\tfont-size: 20px;\r\n}\r\n\r\n.form-control {\r\n    color: #000000;\r\n}\r\n\r\n#submit_button {\r\n    background-color: #ffffff;\r\n    color: #000000;\r\n    padding: 10px 15px;\r\n    font-size: 16px;\r\n    border-radius: 5px;\r\n}\r\n\r\n#myFile {\r\n\r\n    background-color: #ffffff;\r\n    color: #000000;\r\n    padding: 10px 15px;\r\n    font-size: 16px;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n}\r\n\r\n#file-upload {\r\n    background-color: #ffffff;\r\n    color: #000000;\r\n    position: relative;\r\n    padding: 1px;\r\n}\r\n\r\n.use-img{\r\n    width: 50px;\r\n    border-radius: 100%;\r\n    border: 1px solid #eee;\r\n}\r\n\r\n\r\n.top .search i {\r\n    font-size: 2rem;\r\n    margin-right: 5px;\r\n}\r\n\r\n.btn-primary{\r\n    background-color: #0f3854;\r\n    --bs-btn-border-color: #000000;\r\n    --bs-btn-bg: #002b37;\r\n    --bs-btn-hover-bg: #0f3854;\r\n    --bs-btn-hover-border-color: #002b37;\r\n    --bs-btn-active-bg: #0f3854;\r\n\r\n}\r\n\r\n.main-content {\r\n\r\n\r\n    background-color: #eee;\r\n    margin: 0 auto;\r\n    top: 0;\r\n    left: 80px;\r\n    transition: all 0.5s ease;\r\n    padding: 1rem;\r\n}\r\n\r\n.container2 {\r\n    max-height: 75vh;\r\n    overflow: auto;\r\n    flex-direction:column-reverse;\r\n}\r\n\r\n:root {\r\n    --bs-tertiary-bg: #fffffff;\r\n}\r\n\r\n\r\n#footer {\r\n    color: #eeeeee;\r\n\r\n}\r\n\r\n/* Style for the loading spinner */\r\n#loading {\r\n    display: none;\r\n}\r\n\r\n.float-start{\r\n    padding-left: 5px;\r\n    padding-right: 5px;\r\n}\r\n\r\n.float-end{\r\n    padding-left: 5px;\r\n    padding-right: 5px;\r\n}\r\n.border{\r\n    border-radius: 8px;\r\n}\r\n.bg-dark{\r\n    border-radius: 25px;\r\n}\r\n.bg-primary{\r\n    border-radius: 10px;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/css/style.css b/css/style.css
+--- a/css/style.css	(revision 847bf7f176bc31a364a254b6b84acd6c0f211a7d)
++++ b/css/style.css	(date 1702483319870)
+@@ -144,11 +144,14 @@
+ .float-start{
+     padding-left: 5px;
+     padding-right: 5px;
++    background-color: #fcfcfc;
+ }
+ 
+ .float-end{
++
+     padding-left: 5px;
+     padding-right: 5px;
++    background-color: #fcfcfc;
+ }
+ .border{
+     border-radius: 8px;
+@@ -158,4 +161,4 @@
+ }
+ .bg-primary{
+     border-radius: 10px;
+-}
+\ No newline at end of file
++}
+Index: Views/index.phtml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php require('template/header.phtml'); ?>\r\n<!-- Chat -->\r\n<div class=\"main-content d-flex col justify-content-center\" style=\"min-height: 90vh\">\r\n    <div class=\"container mt-auto row\">\r\n        <div class=\"container2 mt-auto mb-3 row border border-dark-subtle \">\r\n\r\n        <?php if (count($view->conversations) == 0): ?>\r\n            <div class=\"row\">\r\n\r\n                <div class=\"col-md col-sm-1\">\r\n                    <h2>Prompts relating to the file to give the ChatBot </h2>\r\n                    <ul>\r\n                        <li>Counting the total number of columns</li>\r\n                        <li>Counting the total number of rows</li>\r\n                        <li>Stating the data \"column name\" given column</li>\r\n                        <li>Counting the number of blank or non-blank values of a column</li>\r\n                        <li>For number columns, calculating the average, min, max or sum of the column</li>\r\n                        <li>For text columns, calculating the maximum character length</li>\r\n                        <li>Grouping by any column and counting each value</li>\r\n                    </ul>\r\n                </div>\r\n\r\n                <div class=\" col-md col-sm-1\">\r\n                    <h2>Normal prompts to give to the ChatBot</h2>\r\n                    <ul>\r\n                        <li>Square root of \"number\"</li>\r\n                        <li>give me directions from \"city\" to \"city\"</li>\r\n                        <li>Square \"number\"</li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        <?php endif; ?>\r\n\r\n        <?php if (isset($view->conversations)):?>\r\n        <div class=\"row min-vh-80 overflow-auto \">\r\n            <?php foreach ($view->conversations as $msg): ?>\r\n                <div class=\"user-title\">\r\n                    <small class=\"float-end bg-primary  mx-0 w-auto \">You</small>\r\n                </div>\r\n                <div class=\"user\">\r\n                    <p class=\"float-end border border-primary \"><?php echo $msg->getPrompt() ?></p>\r\n                </div>\r\n\r\n                <h5>AI</h5>\r\n                <div class=\"ai-title\">\r\n\r\n                    <small class=\"float-start bg-dark w-auto mx-0\">ChatMim</small>\r\n                </div>\r\n                <div class=\"ai_answer\">\r\n\r\n                    <p class=\"float-start border border-dark \"><?php echo $msg->getResponse() ?></p>\r\n                </div>\r\n            <?php endforeach; ?>\r\n        </div>\r\n        <?php endif; ?>\r\n        </div>\r\n                <!-- Loading Screen -->\r\n                <div id=\"loading\" class=\"\">\r\n                    <img src=\"/Images/loading.gif\" width=\"75px\" height=\"75px\" alt=\"Loading...\"/>\r\n                </div>\r\n        <form method=\"post\" action=\"<?php echo $_SERVER['PHP_SELF']?>\" onsubmit=\"showLoading()\">\r\n            <div class=\" input-group mb-3, row\">\r\n                <div class=\"col-md col-sm-1 p-0\">\r\n                    <input class=\"form-control\" type=\"file\" id=\"myFile\" name=\"filename\">\r\n                </div>\r\n                <div class=\"col-md col-sm-1 d-flex p-0\">\r\n                    <input class=\"form-control w-35\" type=\"text\" id=\"user-input\" placeholder=\"Type your message...\" aria-label=\"Type here\" name=\"chatMsg\" value=\"<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>\" autocomplete=\"false\" required>\r\n                    <button class=\"btn btn-outline-secondary\" id=\"submit_button\" name=\"submit\"  type=\"submit\">Submit</button>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <?php if($view->callError):?>\r\n        <div class=\"alert alert-dismissible alert-warning text-center\">\r\n            <h4 class=\"alert-heading\">Api Call Error</h4>\r\n            <p class=\"mb-0\">Seems Like There Was An Issue With The Api Call. Please Try Again Later</p>\r\n        </div>\r\n        <?php endif;?>\r\n    </div>\r\n</div>\r\n\r\n<script>\r\n    function showLoading() {\r\n        // Display the loading screen\r\n        document.getElementById('loading').style.display = 'block';\r\n    }\r\n</script>\r\n\r\n<?php require('template/footer.phtml') ?>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Views/index.phtml b/Views/index.phtml
+--- a/Views/index.phtml	(revision 847bf7f176bc31a364a254b6b84acd6c0f211a7d)
++++ b/Views/index.phtml	(date 1702482796396)
+@@ -41,10 +41,9 @@
+                     <p class="float-end border border-primary "><?php echo $msg->getPrompt() ?></p>
+                 </div>
+ 
+-                <h5>AI</h5>
++
+                 <div class="ai-title">
+-
+-                    <small class="float-start bg-dark w-auto mx-0">ChatMim</small>
++                    <small class="float-start bg-dark w-auto mx-0"><img src="../Images/Hackcamp_Logo.png" width="32px" height="32px">ChatMim</small>
+                 </div>
+                 <div class="ai_answer">
+ 
