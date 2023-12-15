@@ -38,7 +38,7 @@
                 </p>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body text-white bg-dark mb-0">
-                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onload="window()">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onload="refresh()">
                             <label for="chatname">Chat name</label>
                             <input class="form-control" id="chatname" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
                             <br/>

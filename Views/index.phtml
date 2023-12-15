@@ -57,7 +57,7 @@
                 <div id="loading" class="">
                     <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
                 </div>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()" onload="window()">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()" onload="refresh()">
             <div class="d-flex justify-content-end input-group mb-3 row">
                 <div class="d-flex col-md  p-0 text-end ">
                     <input class="form-control custom-height" type="file" id="myFile" name="filename">
@@ -83,7 +83,7 @@
         document.getElementById('user-input').style.display = 'block';
     }
 
-    function window() {
+    function refresh() {
         document.getElementById('input_field').reset();
     }
 </script>
