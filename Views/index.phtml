@@ -44,7 +44,7 @@
 
 
                 <div class="ai-title">
-                    <small class="float-start bg-dark w-auto mx-0"><img src="../Images/Hackcamp_Logo.png" width="32px" height="32px">ChatMim</small>
+                    <small class="float-start bg-dark w-auto mx-0"><img src="../Images/Hackcamp_Logo.png" width="32px" height="32px" alt="AI">ChatMim</small>
                 </div>
                 <div class="ai_answer">
                     <p class="float-start border border-dark bg-info-subtle chatText"><?php echo $msg->getResponse() ?></p>
@@ -57,13 +57,13 @@
                 <div id="loading" class="">
                     <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
                 </div>
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()" onload="window()">
             <div class="d-flex justify-content-end input-group mb-3 row">
                 <div class="d-flex col-md  p-0 text-end ">
                     <input class="form-control custom-height" type="file" id="myFile" name="filename">
                 </div>
                 <div class="col-md  d-flex p-0 ">
-                    <input class="form-control custom-height" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
+                    <input class="form-control custom-height" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required">
                     <button class="btn btn-outline-secondary custom-height" id="submit_button" name="submit"  type="submit">Submit</button>
                 </div>
             </div>
@@ -80,7 +80,11 @@
 <script>
     function showLoading() {
         // Display the loading screen
-        document.getElementById('loading').style.display = 'block';
+        document.getElementById('user-input').style.display = 'block';
+    }
+
+    function window() {
+        document.getElementById('input_field').reset();
     }
 </script>
 
