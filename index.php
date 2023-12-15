@@ -11,14 +11,17 @@ $ch = curl_init();
 // Creates new Instances of the two included Classes
 $conversations = new ConversationsDataSet();
 $newChat = new differentChatsDataSet();
+
 // Fetches all Conversations and Chats using the Methods from the included Classes
 // Retrieved data is then stored in corresponding $view
+
 $view->conversations = $conversations->fetchAllConversations();
 $view->chats = $newChat->fetchAllChats();
 $view->callError = null; // Makes an error check to be called in the front end
 $view->time = new DateTime(); // Creates new time Object
 
 if (isset($_POST['submit'])) {
+
     // Creates a time Object to make a time stamp
     $timeStamp=time();
     $dateTime = new DateTime();
