@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08bc917e-85f3-45b3-9e11-69892c957703" name="Changes" comment="Added JS to clear forms on page refresh">
+    <list default="true" id="08bc917e-85f3-45b3-9e11-69892c957703" name="Changes" comment="Changed JS call from window() to refresh() to avoid conflict with existing declaration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/template/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/template/header.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,20 +32,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/royal/OneDrive - University of Salford/Hackcamp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "Errors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/OneDrive - University of Salford/Hackcamp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\royal\OneDrive - University of Salford\Hackcamp\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Do it NOW" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8008">
       <method v="2" />
@@ -65,7 +68,8 @@
       <workItem from="1702571652065" duration="669000" />
       <workItem from="1702572342256" duration="456000" />
       <workItem from="1702572914157" duration="83000" />
-      <workItem from="1702631916384" duration="6023000" />
+      <workItem from="1702631916384" duration="6441000" />
+      <workItem from="1702638397927" duration="476000" />
     </task>
     <task id="LOCAL-00001" summary="Added JS to clear forms on page refresh">
       <option name="closed" value="true" />
@@ -75,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702637262514</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed JS call from window() to refresh() to avoid conflict with existing declaration">
+      <option name="closed" value="true" />
+      <created>1702638039265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702638039265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added JS to clear forms on page refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JS to clear forms on page refresh" />
+    <MESSAGE value="Changed JS call from window() to refresh() to avoid conflict with existing declaration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed JS call from window() to refresh() to avoid conflict with existing declaration" />
   </component>
 </project>
