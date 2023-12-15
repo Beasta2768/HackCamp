@@ -15,7 +15,7 @@
                     <button class="btn btn-primary col-1 mx-2 w-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                         ≡
                     </button>
-                    <h4 class="col-1 navigation" ">Menu</h4>
+                    <h4 class="col-1 navigation">Menu</h4>
                     <div class="d-flex  col-1">
                         <h1 class="w-auto col-5">Intelligent Mind with <small>OpenAI</small></h1>
                     </div>
@@ -38,10 +38,12 @@
                 </p>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body text-white bg-dark mb-0">
-                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
-                            <input class="form-control" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onload="refresh()">
+                            <label for="chatname">Chat name</label>
+                            <input class="form-control" id="chatname" placeholder="enter chat name" name="newConversationName" value="<?php if (isset($_POST['newConversationName'])){ echo $_POST['newConversationName'];}?>"/>
                             <br/>
-                            <input class="btn btn-success" type="submit" value="newChat" name="newChat"/>
+                            <label for="submission">Chat name</label>
+                            <input class="btn btn-success" id="submission" type="submit" value="newChat" name="newChat"/>
                         </form>
                     </div>
                 </div>
