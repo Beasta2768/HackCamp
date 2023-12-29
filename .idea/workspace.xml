@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08bc917e-85f3-45b3-9e11-69892c957703" name="Changes" comment="Changed JS call from window() to refresh() to avoid conflict with existing declaration">
+      <change beforePath="$PROJECT_DIR$/.idea/HackCamp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/HackCamp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ubv0wui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,7 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2ZXU8daUAH1HzDIe0YmeRWuRKm6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,7 +43,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/OneDrive - University of Salford/Hackcamp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/royal/OneDrive - University of Salford/SPAT/Hackcamp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -70,6 +76,7 @@
       <workItem from="1702572914157" duration="83000" />
       <workItem from="1702631916384" duration="6441000" />
       <workItem from="1702638397927" duration="476000" />
+      <workItem from="1702643039545" duration="151000" />
     </task>
     <task id="LOCAL-00001" summary="Added JS to clear forms on page refresh">
       <option name="closed" value="true" />
@@ -119,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added JS to clear forms on page refresh" />
     <MESSAGE value="Changed JS call from window() to refresh() to avoid conflict with existing declaration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed JS call from window() to refresh() to avoid conflict with existing declaration" />
+    <MESSAGE value="Changed &quot;Conversation History&quot; to &quot;Other Conversations&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed &quot;Conversation History&quot; to &quot;Other Conversations&quot;" />
   </component>
 </project>
