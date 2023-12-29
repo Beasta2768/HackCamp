@@ -60,7 +60,7 @@
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()" onload="refresh()">
             <div class="d-flex justify-content-end input-group mb-3 row">
                 <div class="d-flex col-md  p-0 text-end ">
-                    <input class="form-control custom-height" type="file" id="myFile" name="filename">
+                    <input class="form-control custom-height" type="file" id="myFile" name="filename" accept=".xls,.xlsx">
                 </div>
                 <div class="col-md  d-flex p-0 ">
                     <input class="form-control custom-height" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required">
