@@ -57,14 +57,22 @@
                 <div id="loading" class="">
                     <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
                 </div>
+
+        <!--File Upload        -->
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" onsubmit="showLoading()">
             <div class=" input-group mb-3, row">
-                <div class="col-md col-sm-1 p-0">
-                    <input class="form-control" type="file" id="myFile" name="myFile">
+                <div class="col-md col-sm-1 p-0 d-flex">
+                    <input class="form-control" type="file" id="myFile" name="myFile" required>
+                    <button class="btn btn-outline-secondary" id="submit_button" name="Upload"  type="submit">Upload</button>
                 </div>
+            </div>
+        </form>
+        <!--Message Send-->
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" onsubmit="showLoading()">
+            <div class=" input-group mb-3, row">
                 <div class="col-md col-sm-1 d-flex p-0">
                     <input class="form-control w-35" type="text" id="user-input" placeholder="Type your message..." aria-label="Type here" name="chatMsg" value="<?php if (isset($_POST['chatMsg'])){ echo $_POST['chatMsg'];}?>" autocomplete="false" required>
-                    <button class="btn btn-outline-secondary" id="submit_button" name="submit"  type="submit">Submit</button>
+                    <button class="btn btn-outline-secondary" id="submit_button" name="submit"  type="submit">Send</button>
                 </div>
             </div>
         </form>
