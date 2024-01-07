@@ -22,7 +22,11 @@ $view->fileErrorMessage = "";
 $view->fileUploaded = false;
 $view->filePath = null;
 
+
 $view->files = new FilesDataSet();
+if (isset($view->files->getFilePath(1)[0])){
+$view->fileName = substr($view->files->getFilePath(1)[0]->getFilepath(),8);
+}
 $view->time = new DateTime(); // creates new time object
 $view->chatCreationError = false;
 
@@ -37,10 +41,16 @@ if(isset($_POST["Upload"])){
 
     if($_FILES AND $_FILES['myFile']['name']> 0){
         $fileHandle->uploadFile($target_file,$imageFileType);
-        $view->fileUploaded = true;
+        if ($fileHandle->getFileError()){
+            $view->fileError = $fileHandle->getFileError();
+            $view->fileErrorMessage = $fileHandle->getFileErrorMessage();
+        } else {
+            $view->fileUploaded = true;
 
-        $view->files->addFilePath(1,$fileHandle->getTargetFile());
-
+            $view->files->removeFilePath(1);
+            $view->files->addFilePath(1,$fileHandle->getTargetFile());
+            $view->fileName = substr($view->files->getFilePath(1)[0]->getFilepath(),8);
+        }
     }
 
 }
@@ -65,8 +75,6 @@ if (isset($_POST["submit"])) {
 
 
     $view->filePath = $view->files->getFilePath(1)[0]->getFilePath();
-
-    var_dump("http://127.0.0.1:5000/?prompt=".$prompt."&file=http://localhost:8008/".$view->filePath);
     if(isset($view->filePath)){
         if(file_exists($view->filePath)){
             $ch = curl_init();
@@ -95,7 +103,6 @@ if (isset($_POST["submit"])) {
             //displays error to the front end it there is an error occurs
         } else{
             $view->callError = $response->error;
-            var_dump($response);
         }
     } else {
         //calls the public api from the url given
@@ -121,7 +128,6 @@ if (isset($_POST["submit"])) {
 
             //displays error to the front end it there is an error occurs
         } else{
-            var_dump($response);
             $view->callError = $response->error;
         }
     }}

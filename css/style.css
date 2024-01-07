@@ -1,3 +1,8 @@
+.navigation {
+
+    padding: 0;
+}
+
 h1, small {
     margin: auto;
     text-align: center;
@@ -112,18 +117,31 @@ img#logo {
 .main-content {
 
 
-    background-color: #eee;
     margin: 0 auto;
     top: 0;
     left: 80px;
     transition: all 0.5s ease;
     padding: 1rem;
+
 }
 
 .container2 {
     max-height: 75vh;
     overflow: auto;
     flex-direction:column-reverse;
+    border-radius: 9px;
+    padding-left: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 :root {
@@ -147,21 +165,62 @@ img#logo {
     background-color: #fcfcfc;
 }
 
-.float-end{
+.float-end {
 
     padding-left: 5px;
     padding-right: 5px;
     background-color: #fcfcfc;
 }
-.border{
-    border-radius: 8px;
-}
-.bg-dark{
+
+.bg-dark {
     border-radius: 25px;
 }
-.bg-primary{
+.bg-primary {
     border-radius: 10px;
+}
+.chatText {
+    max-width: 45%;
+    color: rgba(0, 0, 0, 0.63);
+}
+
+.ai_answer .border{
+    border-radius: 0 8px 8px 8px;
+}
+
+.user .border{
+    border-radius: 8px 0 8px 8px;
+}
+
+.bg-dark{
+    border-radius: 0 8px 0 0;
+}
+.bg-primary{
+    border-radius: 8px 0 0 0;
 }
 .chatText{
     max-width: 45%;
+}
+@media  only screen and (max-width:575px) {
+
+    width: auto;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .chatText {
+        max-width: 100%;
+    }
+
+    * {
+        font-size: small;
+    }
+
+    .custom-height{
+        padding: 0px 7px !important;
+    }
+
+}
+
+.border {
+    min-width: 4rem;
 }
