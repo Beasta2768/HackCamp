@@ -10,7 +10,7 @@ class FilesDataSet
         $this->_dbHandle = $this->_dbInstance->getdbConnection();
     }
 
-    public function fetchAllConversations(){
+    public function fetchAllCFiles(){
         $sqlQuery = 'select * from files';
 
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
@@ -43,6 +43,17 @@ class FilesDataSet
         $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
         $statement->bindParam(1,$chat);
         $statement->bindParam(2,$filepath);
+
+        $statement->execute(); // execute the PDO statement
+
+        return $statement->rowCount();
+    }
+
+    public function  removeFilePath($chat){
+        $sqlQuery = 'delete from files where chat = ?';
+
+        $statement = $this->_dbHandle->prepare($sqlQuery); // prepare a PDO statement
+        $statement->bindParam(1,$chat);
 
         $statement->execute(); // execute the PDO statement
 

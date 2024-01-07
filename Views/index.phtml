@@ -1,8 +1,8 @@
 <?php require('template/header.phtml'); ?>
 <!-- Chat -->
-<div class="main-content d-flex col justify-content-center" style="min-height: 90vh">
+<div class="main-content d-flex col justify-content-center " style="min-height: 90vh; background-color: #006782">
     <div class="container mt-auto row">
-        <div class="container2 mt-auto mb-3 row border border-dark-subtle ">
+        <div class="container2 mt-auto mb-3 row border border-dark-subtle bg-white">
 
         <?php if (count($view->conversations) == 0): ?>
             <div class="row">
@@ -34,7 +34,7 @@
         <?php if (isset($view->conversations)):?>
         <div class="row min-vh-80 overflow-auto ">
             <?php foreach ($view->conversations as $msg): ?>
-                    <small class="text-black "><?php echo $msg->getTimeSent() ?></small>
+                    <small class="time text-black"><?php echo $msg->getTimeSent() ?></small>
                 <div class="user-title text-center">
                     <small class="float-end bg-primary  mx-0 w-auto ">You</small>
                 </div>
@@ -55,9 +55,14 @@
         </div>
                 <!-- Loading Screen -->
                 <div id="loading" class="">
-                    <img src="/Images/loading.gif" width="75px" height="75px" alt="Loading..."/>
+                    <img src="/Images/loading.gif" width="90px" height="60px" alt="Loading..."/>
                 </div>
 
+        <?php if(isset($view->fileName)):?>
+            <div class="text-center">
+                <h4 class="alert-heading">Using File : <?php echo $view->fileName?></h4>
+            </div>
+        <?php endif;?>
         <!--File Upload        -->
         <form method="post" action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" onsubmit="showLoading()">
             <div class=" input-group mb-3, row">

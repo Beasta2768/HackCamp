@@ -22,7 +22,7 @@ class FileHandling
             $uploadOk = 0;
         }
         // Check file size
-        if ($_FILES["myFile"]["size"] > 500000) {
+        if ($_FILES["myFile"]["size"] > 250000) {
             $this->fileError = "File Size";
             $this->fileErrorMessage = "Sorry, your file is too large.";
             $uploadOk = 0;
@@ -37,13 +37,12 @@ class FileHandling
 
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk != 0) {
-
-                $fileUplod = move_uploaded_file($_FILES["myFile"]["tmp_name"], $targetFile);
+                $fileUpload = move_uploaded_file($_FILES["myFile"]["tmp_name"], $targetFile);
 
             while (file_exists($targetFile) == false){
 //                do nothing
             }
-            if ($fileUplod) {
+            if ($fileUpload) {
                 echo "The file " . htmlspecialchars(basename($_FILES["myFile"]["name"])) . " has been uploaded.";
                 //calls the public api from the url given
                 return true;
@@ -70,6 +69,19 @@ class FileHandling
     public function getResponse()
     {
         return $this->Response;
+    }
+
+    public function getFileError(): string
+    {
+        return $this->fileError;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFileErrorMessage(): string
+    {
+        return $this->fileErrorMessage;
     }
 
 }
